@@ -16,13 +16,10 @@ public class TestHib {
 
         System.out.println(new File("app/resources/hibernate.cfg.xml").exists());
 
-        StudentCourse studentCourse = new StudentCourse();
+        Faculty faculty = new Faculty();
 
+        session.save(faculty);
 
-        //Save the employee in database
-        session.save(studentCourse);
-
-        //Commit the transaction
         session.getTransaction().commit();
         session.close();
         HibernateUtil.shutdown();
