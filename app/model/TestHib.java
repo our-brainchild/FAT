@@ -18,11 +18,8 @@ public class TestHib {
 
         Faculty faculty = new Faculty();
 
-
-        //Save the employee in database
         session.save(faculty);
 
-        //Commit the transaction
         session.getTransaction().commit();
         session.close();
         HibernateUtil.shutdown();
