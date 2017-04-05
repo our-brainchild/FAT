@@ -10,5 +10,8 @@ libraryDependencies ++= Seq(
   javaJdbc,
   cache,
   javaWs,
-  "org.postgresql" % "postgresql" % "9.3-1102-jdbc4"
+  javaJpa,
+  "org.hibernate" % "hibernate-entitymanager" % "5.2.9.Final",
+  "org.postgresql" % "postgresql" % "9.3-1102-jdbc4",
+  "org.liquibase" % "liquibase-core" % "3.5.3"
 )
