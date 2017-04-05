@@ -16,11 +16,11 @@ public class TestHib {
 
         System.out.println(new File("app/resources/hibernate.cfg.xml").exists());
 
-        Speciality speciality = new Speciality();
+        Faculty faculty = new Faculty();
 
 
         //Save the employee in database
-        session.save(speciality);
+        session.save(faculty);
 
         //Commit the transaction
         session.getTransaction().commit();
