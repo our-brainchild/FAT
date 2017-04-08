@@ -11,5 +11,6 @@ libraryDependencies ++= Seq(
   cache,
   javaWs,
   "org.postgresql" % "postgresql" % "9.3-1102-jdbc4",
-  "org.liquibase" % "liquibase-core" % "3.5.3"
+  "org.liquibase" % "liquibase-core" % "3.5.3",
+  "com.typesafe.play" % "play_2.11" % "2.5.13"
 )
