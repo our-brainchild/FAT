@@ -12,15 +12,8 @@ import scala.collection.Seq;
 public class MyModule extends Module {
     @Override
     public Seq<Binding<?>> bindings(Environment environment, Configuration configuration) {
-        return seq(bind(LiquibaseComponent.class).to(LiquibaseComponentImpl.class));
+        return seq(
+                bind(LiquibaseComponent.class).to(LiquibaseComponentImpl.class).eagerly()
+        );
     }
 }
-/**
- *
-
- class LiquibaseModule extends AbstractModule {
- override def configure(): Unit = {
- bind(classOf[LiquibaseComponent]).to(classOf[LiquibaseComponentImpl]).asEagerSingleton()
- }
- }
- */
