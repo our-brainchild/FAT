@@ -1,5 +1,7 @@
 package model;
 
+import org.springframework.context.annotation.Primary;
+
 import javax.persistence.*;
 
 /**
@@ -7,10 +9,9 @@ import javax.persistence.*;
  */
 @Table
 @Entity
-public class Student {
+public class Student{
 
     @Id
-    @GeneratedValue
     private int id;
     @Column
     private String name;
@@ -70,4 +71,16 @@ public class Student {
     public void setSpecialityNumber(String specialityNumber) {
         this.specialityNumber = specialityNumber;
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", groupNumber='" + groupNumber + '\'' +
+                ", grants=" + grants +
+                ", specialityNumber='" + specialityNumber + '\'' +
+                '}';
+    }
+
 }
