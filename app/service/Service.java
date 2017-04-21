@@ -9,6 +9,6 @@ public interface Service<T> {
     public List<T> selectAll();
     public T selectById(int id);
     public void remove(int id);
-    public void update(int id,T obj);
+    public void update(T obj);
     public void create(T obj);
 }

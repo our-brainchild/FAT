@@ -12,6 +12,7 @@ import play.api.Configuration;
 import play.api.db.Database;
 import play.api.db.PooledDatabase;
 import play.db.Databases;
+import service.Service;
 
 
 import javax.inject.Inject;
@@ -20,6 +21,24 @@ import java.util.List;
 /**
  * Created by anton on 17.04.17.
  */
+
+interface StudentService<Student> extends Service<Student> {
+    @Override
+    List<Student> selectAll();
+
+    @Override
+    Student selectById(int id);
+
+    @Override
+    void remove(int id);
+
+    @Override
+    void update(Student student);
+
+    @Override
+    void create(Student student);
+}
+
 public class StudentServiceImpl implements StudentService<Student> {
 
     @Override
@@ -58,13 +77,13 @@ public class StudentServiceImpl implements StudentService<Student> {
     }
 
     @Override
-    public void update(int id, Student student) {
+    public void update(Student student) {
         if (student == null) return;
 
         Session session = openSession();
         session.beginTransaction();
 
-        Student st = selectById(id);
+        Student st = selectById(student.getId());
 
         st.setGrants(student.getGrants());
         st.setGroupNumber(student.getGroupNumber());

@@ -12,6 +12,7 @@ import javax.persistence.*;
 public class Student{
 
     @Id
+    @GeneratedValue
     private int id;
     @Column
     private String name;
@@ -23,8 +24,15 @@ public class Student{
     private String specialityNumber;
 
     public Student() {}
-    public Student(String name, String groupNumber,
-                   double grants, String specialityNumber)
+    public Student(int id, String name, String groupNumber, double grants, String specialityNumber)
+    {
+        this.id = id;
+        this.name = name;
+        this.groupNumber = groupNumber;
+        this.grants = grants;
+        this.specialityNumber = specialityNumber;
+    }
+    public Student(String name, String groupNumber,double grants, String specialityNumber)
     {
         this.name = name;
         this.groupNumber = groupNumber;

@@ -4,8 +4,8 @@
 <hibernate-mapping>
     <class name="model.Student" table="STUDENT">
         <id name="id" type="int">
-            <column name="ID" precision="5" scale="0" />
-            <generator class="assigned" />
+            <column name="ID" precision="5" scale="0" index="true"/>
+
         </id>
         <property name="name" type="string">
             <column name="NAME" length="20" not-null="true" />
