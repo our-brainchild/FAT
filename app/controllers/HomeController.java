@@ -1,20 +1,10 @@
 package controllers;
 
-import DAO.StudentService;
 import DAO.StudentServiceImpl;
 import model.Student;
-import model.utils.HibernateUtil;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.boot.registry.StandardServiceRegistry;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
-import org.hibernate.cfg.Configuration;
-import play.api.db.Database;
-import play.mvc.*;
-
-import views.html.*;
-
-import java.io.File;
+import play.mvc.Controller;
+import play.mvc.Result;
+import views.html.index;
 
 /**
  * This controller contains an action to handle HTTP requests
@@ -31,9 +21,11 @@ public class HomeController extends Controller {
      */
     public Result index() {
 
-        Student student = new Student("Anton", "ИВТ-32о", 2840.0, "09.03.01");
-        StudentService studentService = new StudentServiceImpl();
-        studentService.remove(9);
+//        Student student = new Student(11,"Anton1", "ИВТ-32о", 2840.0, "09.03.01");
+//        StudentServiceImpl studentService = new StudentServiceImpl();
+//        studentService.update(student);
+
+
         return ok(index.render("Your new application is ready."));
     }
 

@@ -14,8 +14,8 @@
         <property name="use_sql_comments">true</property>
         <property name="hbm2ddl.auto">update</property>
         <mapping class="model.Student"/>
-        <mapping class="model.Speciality"/>
+      <!--  <mapping class="model.Speciality"/>
         <mapping class="model.StudentCourse"/>
-        <mapping class="model.Faculty"/>
+        <mapping class="model.Faculty"/> -->
     </session-factory>
 </hibernate-configuration>
