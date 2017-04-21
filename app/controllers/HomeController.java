@@ -21,9 +21,9 @@ public class HomeController extends Controller {
      */
     public Result index() {
 
-        Student student = new Student(11,"Anton1", "ИВТ-32о", 2840.0, "09.03.01");
-        StudentServiceImpl studentService = new StudentServiceImpl();
-        studentService.update(student);
+//        Student student = new Student(11,"Anton1", "ИВТ-32о", 2840.0, "09.03.01");
+//        StudentServiceImpl studentService = new StudentServiceImpl();
+//        studentService.update(student);
 
 
         return ok(index.render("Your new application is ready."));
